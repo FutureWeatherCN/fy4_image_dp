@@ -1,0 +1,193 @@
+﻿<Window x:Class="WpfTestFy4Class.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTestFy4Class"
+        mc:Ignorable="d"
+        Title="FY-4A成像仪广播数据应用类库测试程序" Height="915" Width="1600" WindowState="Maximized" Icon="logo1.png">
+    <Grid x:Name="grid0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="2"/>
+            <ColumnDefinition Width="165.5"/>
+            <ColumnDefinition Width="4.5"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="grid00" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="150*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" Content="全区域图像光谱2/3/6/14通道" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="0" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid000" Grid.Column="0" Grid.Row="1" Margin="1">
+                <Image x:Name="imgGrid00" Stretch="Fill" PreviewMouseDown="imgGrid00_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="2" Grid.Row="0" Content="光谱1/2通道可见光光谱0.47/0.65微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="2" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid001" Grid.Column="2" Grid.Row="1" Margin="1">
+                <Image x:Name="imgGrid01" Stretch="Fill" PreviewMouseDown="imgGrid01_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="4" Grid.Row="0" Content="光谱2通道可见光光谱0.65微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="4" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid002" Grid.Column="4" Grid.Row="1" Margin="1">
+                <Image x:Name="imgGrid02" Stretch="Fill" PreviewMouseDown="imgGrid02_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="6" Grid.Row="0" Content="光谱3通道可见光光谱0.83微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="6" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid003" Grid.Column="6" Grid.Row="1" Margin="1">
+                <Image x:Name="imgGrid03" Stretch="Fill" PreviewMouseDown="imgGrid03_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="8" Grid.Row="0" Content="光谱4通道近红外光谱1.37微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="8" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid004" Grid.Column="8" Grid.Row="1" Margin="1">
+                <Image x:Name="imgGrid04" Stretch="Fill" PreviewMouseDown="imgGrid04_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="0" Grid.Row="2" Content="光谱5通道近红外光谱1.61微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="0" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid010" Grid.Column="0" Grid.Row="3" Margin="1">
+                <Image x:Name="imgGrid05" Stretch="Fill" PreviewMouseDown="imgGrid05_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="2" Grid.Row="2" Content="光谱6通道近红外光谱2.22微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="2" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid011" Grid.Column="2" Grid.Row="3" Margin="1">
+                <Image x:Name="imgGrid06" Stretch="Fill" PreviewMouseDown="imgGrid06_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="4" Grid.Row="2" Content="光谱7通道中红外光谱3.72(低分)微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="4" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid012" Grid.Column="4" Grid.Row="3" Margin="1">
+                <Image x:Name="imgGrid07" Stretch="Fill" PreviewMouseDown="imgGrid07_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="6" Grid.Row="2" Content="光谱8通道中红外光谱3.72(高分)微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="6" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid013" Grid.Column="6" Grid.Row="3" Margin="1">
+                <Image x:Name="imgGrid08" Stretch="Fill" PreviewMouseDown="imgGrid08_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="8" Grid.Row="2" Content="光谱9通道水汽吸收光谱6.25微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="8" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid014" Grid.Column="8" Grid.Row="3" Margin="1">
+                <Image x:Name="imgGrid09" Stretch="Fill" PreviewMouseDown="imgGrid09_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="0" Grid.Row="4" Content="光谱10通道水汽吸收光谱7.10微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="0" Grid.Row="5" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid020" Grid.Column="0" Grid.Row="5" Margin="1">
+                <Image x:Name="imgGrid10" Stretch="Fill" PreviewMouseDown="imgGrid10_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="2" Grid.Row="4" Content="光谱11通道水汽吸收光谱8.5微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="2" Grid.Row="5" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid021" Grid.Column="2" Grid.Row="5" Margin="1">
+                <Image x:Name="imgGrid11" Stretch="Fill" PreviewMouseDown="imgGrid11_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="4" Grid.Row="4" Content="光谱12通道远红外光谱10.8微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="4" Grid.Row="5" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid022" Grid.Column="4" Grid.Row="5" Margin="1">
+                <Image x:Name="imgGrid12" Stretch="Fill" PreviewMouseDown="imgGrid12_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="6" Grid.Row="4" Content="光谱13通道远红外光谱12.0微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="6" Grid.Row="5" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid023" Grid.Column="6" Grid.Row="5" Margin="1">
+                <Image x:Name="imgGrid13" Stretch="Fill" PreviewMouseDown="imgGrid13_PreviewMouseDown"/>
+            </Grid>
+
+            <Label Grid.Column="8" Grid.Row="4" Content="光谱14通道远红外光谱13.5微米" HorizontalAlignment="Center"  VerticalAlignment="Top"/>
+            <Border Grid.Column="8" Grid.Row="5" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+            <Grid x:Name="grid024" Grid.Column="8" Grid.Row="5" Margin="1">
+                <Image x:Name="imgGrid14" Stretch="Fill" PreviewMouseDown="imgGrid14_PreviewMouseDown"/>
+            </Grid>
+        </Grid>
+
+        <GridSplitter Background="Gray" VerticalAlignment="Stretch"  Width="2" Grid.Column="1"/>
+
+        <Grid x:Name="grid01" Grid.Column="2" Margin="2" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Menu x:Name="menuBat" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGreen">
+                <MenuItem Header="特需处理菜单......" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="15">
+                    <MenuItem x:Name="BatchFilesProc" Header="批量处理选中文件" Click="BatchFilesProc_Click"/>
+                    <MenuItem x:Name="NewFilesMonitor" Header="启动实时监测处理" Click="NewFilesMonitor_Click"/>
+                    <MenuItem x:Name="StopTheProc" Header="终止正在进行的处理过程" Click="StopTheProc_Click" IsEnabled="False"/>
+                </MenuItem>
+            </Menu>
+            <Button x:Name="btnLoadFile" Grid.Row="1" Content="读入FY-4数据文件" HorizontalAlignment="Stretch" Margin="3" VerticalAlignment="Bottom"
+                   FontSize="15" Click="btnLoadFile_Click"/>
+            <Label x:Name="txtTitle" Grid.Row="2" Content="文 件 参 数" HorizontalAlignment="Stretch" Margin="3" VerticalAlignment="Bottom" FontSize="15" FontWeight="Heavy"/>
+            <Border Grid.Row="3" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" Margin="1" VerticalAlignment="Stretch">
+                <TextBox x:Name="txtDisp" Margin="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontSize="10"/>
+            </Border>
+            <Label Grid.Row="4" Content="显示区域(‰度整数)" HorizontalAlignment="Center"  Margin="2" VerticalAlignment="Bottom"  FontSize="14"/>
+            <Grid Grid.Row="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="经纬步长" HorizontalAlignment="Stretch"  VerticalAlignment="Center" FontSize="12"/>
+                <TextBox x:Name="txtLLStep" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Center" BorderThickness="2" Margin="2" 
+                         TextChanged="txt_TextChanged"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="北界纬度" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"/>
+                <TextBox x:Name="txtNLat" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" Margin="2" BorderThickness="2" VerticalAlignment="Stretch"
+                         TextChanged="txt_TextChanged"/>
+                <Label Content="西界经度" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"/>
+                <TextBox x:Name="txtWLon" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" Margin="2" BorderThickness="2" VerticalAlignment="Stretch"
+                         TextChanged="txt_TextChanged"/>
+                <Label Content="南界纬度" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"/>
+                <TextBox x:Name="txtSLat" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Stretch" Margin="2" BorderThickness="2" VerticalAlignment="Stretch"
+                         TextChanged="txt_TextChanged"/>
+                <Label Content="东界经度" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"/>
+                <TextBox x:Name="txtELon" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" Margin="2" BorderThickness="2" VerticalAlignment="Stretch"
+                         TextChanged="txt_TextChanged"/>
+            </Grid>
+            <Button x:Name="btnAffirm" Grid.Row="6" Content="确认显示范围" HorizontalAlignment="Stretch" Margin="2" FontSize="14"
+                    VerticalAlignment="Stretch" Click="btnAffirm_Click"/>
+            <Button x:Name="btnSaveArea" Grid.Row="7" Content="保存各通道区域数据" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2" 
+                    FontSize="14" Click="btnSaveArea_Click"/>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

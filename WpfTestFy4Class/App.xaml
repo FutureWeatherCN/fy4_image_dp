@@ -1,0 +1,9 @@
+﻿<Application x:Class="WpfTestFy4Class.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfTestFy4Class"
+             StartupUri="WpfTestFy4Class.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

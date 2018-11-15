@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTestFy4Class", "WpfTestFy4Class\WpfTestFy4Class.csproj", "{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Debug|x64.ActiveCfg = Debug|x64
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Debug|x64.Build.0 = Debug|x64
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Release|x64.ActiveCfg = Release|x64
+		{0443D4FD-E1B6-4367-B3A5-4C92307EFCD2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E09AC68-BF16-4F06-9A4E-944663030272}
+	EndGlobalSection
+EndGlobal
