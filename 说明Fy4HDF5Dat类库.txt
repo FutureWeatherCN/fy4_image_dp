@@ -1,42 +1,42 @@
-��Һã�
-    ����5�³���CMACast��ʼ�㲥�·�FY4������ɨ�����ƹ۲����ݡ����г��������ݰ���1��500�׷ֱ��ʿɼ���ͨ����3��1����ֱ��ʿɼ���ͨ����7��2����ֱ��ʿɼ��⡢�����к���ͨ����14��4����ɼ��⡢�����С�Զ����ͨ�������ݡ���Լ15���Ӽ������һ�ι۲�ѭ����ʹ���ǵõ����������ݿռ䡢ʱ��ֱ��ʡ�����ͨ�����õ���������ߡ�һ��Сʱ���������ɴ�4GB���ϡ���˾޴�ĸ��������������������������ߴ����˹���������ҵ�ġ����ˡ����ֲ�����ô��Щ����������ô���أ���ô���ܳ�Ϊһ�������ĸ��˶����ǡ��������أ�����Ҫ�����Ǳ��붨��ʹ�á���ѧʹ�á�����FY4���������ݽṹ���ӡ������޴󣬺ܶ����Ѵӵײ������кܶ��ϰ������Ͷ����ྫ���Ʊ�ת���˶�����רҵ�Ĺ�ע�����񡢷�������ͨ����һ��ʱ���Ŭ�������������FY4���ǳ���������Ӧ����⣬Ϊ�Ӵ󡢷��ӵ����������һ�����ýӿڣ�Ŀǰ��ӦWindowsϵͳ.NET�йܴ��뻷����ʹ��.NET��ܵ������ǿ���ֱ�����á����������⣬�Ӷ����򻯡�����������ȥ���ľ����������֯��ʽ�����Ը��ࡢ����ļ��о���������Ӧ�������ϡ�������������⼰������Ҫ��Ա�ͷ�����
+大家好！
+    今年5月初，CMACast开始广播下发FY4号卫星扫描辐射计观测数据。其中成像仪数据包含1个500米分辨率可见光通道、3个1公里分辨率可见光通道、7个2公里分辨率可见光、近、中红外通道、14个4公里可见光、近、中、远红外通道的数据。大约15分钟即可完成一次观测循环，使我们得到的卫星数据空间、时间分辨率、光谱通道数得到革命性提高。一个小时的数据量可达4GB以上。如此巨大的高质量数据真正把我们气象工作者带进了国际气象行业的“富人”俱乐部。那么这些数据我们怎么用呢？怎么才能成为一个真正的富人而不是“土豪”呢？无疑要求我们必须定量使用、科学使用。可是FY4号卫星数据结构复杂、体量巨大，很多朋友从底层做起有很多障碍，如果投入过多精力势必转移了对气象本专业的关注，费神、费力。我通过近一段时间的努力，开发完成了FY4卫星成像仪数据应用类库，为庞大、繁杂的数据设计了一个调用接口，目前适应Windows系统.NET托管代码环境，使用.NET框架的朋友们可以直接引用、调用这个类库，从而大大简化、甚至不用再去关心具体的数据组织形式，可以更多、更快的集中精力在气象应用问题上。下面介绍这个类库及类库的主要成员和方法。
 
-һ��Fy4HDF5Dat.dll��Fy4���ǳ�����HDF�������˵����Fy4HDF5Dat.dll�����ļ�������.NET���йܶ�̬���ӿ⣬�������Ĺ�����ֱ���������þ����ˡ������ǳ��������ݲ�������Ҫ���ܶ����������ʵ�֣�ͬʱ�������Ҳ������HDF5�ĺܶิ�ӵĸ���Ͳ�����ʹ��FY4���������ݵ�ȡ��ø�ֱ�ӡ��򵥡�
-    1���°�(2019�����)�������������ǰ�ϰ�(2018��7�¡�10��)�еĸ����������(��ǰ�Ѿ�����ʹ�õ������ǣ�����Ҫ��������µģ��°������ϰ��ж���ⷽ����������ʽ�����������޸ĳ���)���ر�ֵ��ע����ǣ�
-      ���ȣ������˶���ȡ�����㷨��ѡ�񡣴�ǰ�ĳ�����������⣬����ȡ���ݷ����֧���˹�ʽ����ֵȡ�����㷨������ṩ���°��������֧������������˫���Բ�ֵ�㷨���û��ڵ���������ʱ�ɸ���Ӧ��Ŀ������ѡ����ȡ���ݵ��㷨��
-      ��Σ������˶Գ����ǹ۲����ݰ���ġ����Ӧ�������춥�ǡ���λ�ǣ�̫���춥�ǡ���λ���Լ�������˸�ǵȵ���������ȡ��֧�֡������������ݴ��������Ӧ�ö��ԣ���õ��۲����ݵ�ͬʱ����Ӧ������ǡ�̫���춥�ǡ���λ�Ǽ�������������˸��Ҳ��ͬʱһ���õ���
-      ������19�������⾡�����֧���˲������㡢ֱ��Ѱַ���Ӷ��������˼����ٶȣ��ر���ڶ�˴�������19���������ǿ���������ֵ����쾡�£�������Ǵ�ǰ�ϰ���û����㽫���ڴ����ٶ��ϻ�������Ŀһ�µ����顣
-    2������������Ҫ��Ա��
-      Fy4HDF5Dat.datSetsNum��HDF5�ļ��ڵĵ���/���������ݼ��ĸ�����
-      Fy4HDF5Dat.datSetsNames��HDF5�ļ��ڵĵ���/���������ݼ��ǵ����ơ�
-      Fy4HDF5Dat.ranks��HDF5�ļ��ڵĵ���/���������ݼ��ǵĸ��Ե�ά������
-      Fy4HDF5Dat.dims��HDF5�ļ��ڵĵ���/���������ݼ��ǵĸ��Ե�ά�ȵĴ�С��
-      Fy4HDF5Dat.datColumn��HDF5�ļ��ڵĵ���/���������ݼ��ǵĸ��Ե����ݣ���ά����1��2ʱ����������
-      Fy4HDF5Dat.datRow��HDF5�ļ��ڵĵ���/���������ݼ��ǵĸ��Ե����ݣ���ά����1��2ʱ����������
-      Fy4HDF5Dat.typeNames��HDF5�ļ��ڵĵ���/���������ݼ��ǵĸ��Ե����ݵ��������͡�
-      Fy4HDF5Dat.cbAttributeLst������װ������������������ֵ���б���
-      Fy4HDF5Dat.theFileName��Fy-4�ļ�HDF5��ʽ�ļ�����
-      Fy4HDF5Dat.bSucceed�����ڱ��ﱾ��ʵ�����Ƿ�ɹ��ı�־��
-      Fy4HDF5Dat.strStatus������״̬�ַ����������˽Ȿ�෽���з���������������Ա�����߲����������⡣
-      �������Ա��Ҫ�ǰ�װ��HDF5��ʽ�ļ��е���Ҫ���ĵ���Ҫ������
-    3������������Ҫ������
-      Fy4HDF5Dat.Fy4HDF5Dat(string Fy4HDF5Filename)����HDF5��ʽ�ļ�ʵ����FY-4AHDF5��ʽ��������(��ʵ�Ͽ������κ�HDF5��ʽ�ĵ����ļ���ʵ�����������ķ��������Fy4������HDF5�ļ�)���û��������������ֻ��Ҫ���ļ�������ָ��FY4������HDF��ʽ�ļ����ɡ�����ָ������������ļ����춥�ǡ���λ�ǵȵ��������ļ���
-      Fy4HDF5Dat.GetaChannelWholeImg(ref bool bAddGrid, ref string datSetName, out Bitmap objBitmap)����ȡFy-4ĳͨ�����ݼ�ȫ����ĻҶ�ͼ�񡣵������౻�ɹ���ʼ���󣬵�������������õ���Ӧͨ��(dataSetNameָ��)��ȫ������ͶӰ�Ҷ�ͼ��(�Ƿ�������ѡ��)��
-      Fy4HDF5Dat.GetaChannelWholeDat(ref string datSetName, out int rowB, out int colB, out int rowE, out int colE, out int[,] arrGrays, out float[,] arrValues)����ȡFy-4ĳͨ�����ݼ�ȫ���������ֵ���������౻�ɹ���ʼ���󣬵�������������õ���Ӧͨ��(dataSetNameָ��)��ȫ������ͶӰ�Ҷ����ݺ�Ҫ�����ݡ�
-      Fy4HDF5Dat.GetaPointValue(ref string datSetName, ref int iLat, ref int iLong, out int iGray, out int iBright, int iAlgorithem)����ȡ������γ������Ӧ��Fy-4����ĳ����һͨ����ͼ��Ҷ�ֵ�������¶�ֵ/������ֵ��ʹ���㷨��ѡ��
-      Fy4HDF5Dat.GetaPointSet(ref int iLat, ref int iLon, out string[] nameChannel, out int[] aGray, out int[] aBright, int iAlgorithem)����ȡ������γ������Ӧ��Fy-4������������ͨ��ͼ��Ҷ�ֵֵ�������¶�ֵ/������ֵ��ʹ���㷨��ѡ��
-      Fy4HDF5Dat.GetaChannelAreaData(ref string datChannel, ref int iLatB, ref int iLonB, ref int iLatE, ref int iLonE, ref int iStep, out int[,] grayRanks, out float[,] brightRanks, int iAlgorithem)����ȡFy-4ɨ����ĳͨ��ĳ��������ݣ������Ҷȵ����ݺ��������ݣ�ʹ���㷨��ѡ��
-      Fy4HDF5Dat.GetaChannelAreaImage(ref string datChannel, ref int iLatB, ref int iLonB, ref int iLatE, ref int iLonE, ref int iStep, out Bitmap objBitmap, int iAlgorithm)����ȡFy-4ɨ����ĳͨ��ĳ����ĻҶ�ͼ��ʹ���㷨��ѡ��
-      Fy4HDF5Dat.GetZenithAzimuthGlint(ref int iLatB, ref int iLonB, ref int iLatE, ref int iLonE, ref int iStep, out float[][,] fZAG, int iAlgorithem)����ȡFY4���ǳ����Ƕ���Ӧ��γ�����й۲⾭γ������ǡ�̫���춥�ǡ���λ�Ǽ�������˸�ǵ����ݣ�ʹ���㷨��ѡ��
+一、Fy4HDF5Dat.dll：Fy4卫星成像仪HDF数据类库说明。Fy4HDF5Dat.dll是主文件，他是.NET的托管动态链接库，因此在你的工程中直接添加引用就行了。对卫星成像仪数据操作的主要功能都在这个库中实现，同时，这个库也屏蔽了HDF5的很多复杂的概念、和操作，使得FY4成像仪数据调取变得更直接、简单。
+    1、新版(2019新年版)的这个纠正了以前老版(2018年7月—10月)中的个别错误以外(此前已经下载使用的朋友们，建议要改用这个新的，新版兼顾了老版中对类库方法的引用形式，无需另行修改程序)，特别值得注意的是：
+      首先，增加了对提取数据算法的选择。此前的成像仪数据类库，在提取数据方面仅支持了公式换算值取整的算法，这次提供的新版类库增加支持了网格数据双线性插值算法。用户在调用这个类库时可根据应用目标自行选择提取数据的算法。
+      其次，增加了对成像仪观测数据伴随的、相对应的卫星天顶角、方位角，太阳天顶角、方位角以及阳光闪烁角等地理数据提取的支持。即：对于数据处理方面的应用而言，你得到观测数据的同时，相应点的卫星、太阳天顶角、方位角及这个点的阳光闪烁角也可同时一并得到。
+      第三，19新年版类库尽量多的支持了并行运算、直接寻址，从而大大提高了计算速度，特别对于多核处理器，19新年版类库的强劲动力表现的淋漓尽致，如果你是此前老版的用户，你将会在处理速度上获得令你耳目一新的体验。
+    2、数据类库的主要成员：
+      Fy4HDF5Dat.datSetsNum：HDF5文件内的单组/根组下数据集的个数。
+      Fy4HDF5Dat.datSetsNames：HDF5文件内的单组/根组下数据集们的名称。
+      Fy4HDF5Dat.ranks：HDF5文件内的单组/根组下数据集们的各自的维度数。
+      Fy4HDF5Dat.dims：HDF5文件内的单组/根组下数据集们的各自的维度的大小。
+      Fy4HDF5Dat.datColumn：HDF5文件内的单组/根组下数据集们的各自的数据，在维度是1或2时，其列数。
+      Fy4HDF5Dat.datRow：HDF5文件内的单组/根组下数据集们的各自的数据，在维度是1或2时，其行数。
+      Fy4HDF5Dat.typeNames：HDF5文件内的单组/根组下数据集们的各自的数据的数据类型。
+      Fy4HDF5Dat.cbAttributeLst：用于装载所有属性名和属性值的列表。
+      Fy4HDF5Dat.theFileName：Fy-4文件HDF5格式文件名。
+      Fy4HDF5Dat.bSucceed：用于表达本类实例化是否成功的标志。
+      Fy4HDF5Dat.strStatus：程序状态字符串，用于了解本类方法中发生的意外情况，以便调用者查找意外问题。
+      上述类成员主要是包装了HDF5格式文件中的需要关心的主要参数。
+    3、数据类库的主要方法：
+      Fy4HDF5Dat.Fy4HDF5Dat(string Fy4HDF5Filename)：以HDF5格式文件实例化FY-4AHDF5格式的数据类(事实上可以用任何HDF5格式的单组文件来实例化，但类库的方法仅针对Fy4成像仪HDF5文件)。用户调用这个方法，只需要将文件名参数指向FY4成像仪HDF格式文件即可。包括指向成像仪数据文件和天顶角、方位角等地理数据文件。
+      Fy4HDF5Dat.GetaChannelWholeImg(ref bool bAddGrid, ref string datSetName, out Bitmap objBitmap)：获取Fy-4某通道数据集全区域的灰度图像。当数据类被成功初始化后，调用这个方法将得到相应通道(dataSetName指向)的全区域标称投影灰度图像(是否带网格可选择)。
+      Fy4HDF5Dat.GetaChannelWholeDat(ref string datSetName, out int rowB, out int colB, out int rowE, out int colE, out int[,] arrGrays, out float[,] arrValues)：获取Fy-4某通道数据集全区域的数据值。当数据类被成功初始化后，调用这个方法将得到相应通道(dataSetName指向)的全区域标称投影灰度数据和要素数据。
+      Fy4HDF5Dat.GetaPointValue(ref string datSetName, ref int iLat, ref int iLong, out int iGray, out int iBright, int iAlgorithem)：获取给定经纬网格点对应的Fy-4卫星某个单一通道的图像灰度值和亮度温度值/反照率值，使用算法可选择。
+      Fy4HDF5Dat.GetaPointSet(ref int iLat, ref int iLon, out string[] nameChannel, out int[] aGray, out int[] aBright, int iAlgorithem)：获取给定经纬网格点对应的Fy-4卫星所有数据通道图像灰度值值和亮度温度值/反照率值，使用算法可选择。
+      Fy4HDF5Dat.GetaChannelAreaData(ref string datChannel, ref int iLatB, ref int iLonB, ref int iLatE, ref int iLonE, ref int iStep, out int[,] grayRanks, out float[,] brightRanks, int iAlgorithem)：获取Fy-4扫描仪某通道某区域的数据，包括灰度的数据和亮温数据，使用算法可选择。
+      Fy4HDF5Dat.GetaChannelAreaImage(ref string datChannel, ref int iLatB, ref int iLonB, ref int iLatE, ref int iLonE, ref int iStep, out Bitmap objBitmap, int iAlgorithm)：获取Fy-4扫描仪某通道某区域的灰度图像，使用算法可选择。
+      Fy4HDF5Dat.GetZenithAzimuthGlint(ref int iLatB, ref int iLonB, ref int iLatE, ref int iLonE, ref int iStep, out float[][,] fZAG, int iAlgorithem)：提取FY4卫星成像仪对相应经纬区域中观测经纬点的卫星、太阳天顶角、方位角及阳光闪烁角的数据，使用算法可选择。
 
-����Fy4���ǳ�����HDF�������Fy4HDF5Dat.dll��ʹ�ã�Fy4HDF5Dat.dll����ؼ��˶�Fy4�����ǳ�����HDF5��ʽ�ļ��Ĳ�����ʹ���ǿ���רע�ھ�������ݴ���������ʵ�ʣ���������HDF5������ķ��ӣ��������Ϊ���磺ȡĳ��ͨ��ĳһ�����ֵ��ȡĳһ�������ͼ��ȵ�ֱ�ӵķ�ʽ�ϡ���ˣ�ʹ�����Fy4HDF5Dat.dll��̬���ӿ⣬Ҫͬʱ����HDF5������⡣��ô���ǰ���������ļ���HDF5DotNet.dll��hdf5_hldll.dll��hdf5dll.dll��szip.dll����zlib.dll���������̬���ӿ�������HDF��վ�Ϲ���������HDF5���ݺ����⣬�����ṩ�˲���HDF5��ʽ���ݵ��ڶ����ʵĽӿں�������ˣ���������Fy4HDF5Dat.dllʱ��Ҫ��������ļ�һ����������������õ�·���£�������Ĺ���������ʱ����ֻ��Ҫ����Fy4HDF5Dat.dll��HDF5DotNet.dll��������̬���ӿ⼴�ɡ������������������������������ӵġ�
+二、Fy4卫星成像仪HDF数据类库Fy4HDF5Dat.dll的使用：Fy4HDF5Dat.dll极大地简化了对Fy4号卫星成像仪HDF5格式文件的操作，使我们可以专注于具体的数据处理。它的实质，是屏蔽了HDF5操作类的繁杂，把问题简化为比如：取某个通道某一个点的值，取某一个区域的图像等等直接的方式上。因此，使用这个Fy4HDF5Dat.dll动态链接库，要同时引用HDF5操作类库。那么他们包含这五个文件：HDF5DotNet.dll；hdf5_hldll.dll；hdf5dll.dll；szip.dll；和zlib.dll。这五个动态链接库是美国HDF网站上公开公布的HDF5数据函数库，它们提供了操作HDF5格式数据的众多普适的接口函数。因此，当你引用Fy4HDF5Dat.dll时，要把这五个文件一并拷贝进你打算引用的路径下，但在你的工程中引用时，则只需要引用Fy4HDF5Dat.dll和HDF5DotNet.dll这两个动态链接库即可。其它的链接是由这两个库自行链接的。
 
-��������Fy4HDF5Dat.dll������ʾ����Ϊ��չʾ���ʹ������������������������Ŀ���ұ�����������Ĳ��Գ��򣬵�����ʱ������ƣ����Ѿ���������Ĳ��Գ��򣬸Ľ�����һ����Fy4�����ǳ��������ݴ���Ӧ�ó��򡱡�׼��Ͷ��Fy4������Ӧ�ÿ�����ͬ�ʣ����Բο�������Գ���Ĵ��롣���Գ����˵�����ڣ�˵��Fy4ClassTest.txt�ļ��и�����
+三、关于Fy4HDF5Dat.dll的引用示范：为了展示如何使用这个工具类库致力于您的项目，我编制了这个类库的测试程序，但随着时间的推移，我已经将这个类库的测试程序，改进成了一个“Fy4号卫星成像仪数据处理应用程序”。准备投入Fy4号卫星应用开发的同仁，可以参考这个测试程序的代码。测试程序的说明将在：说明Fy4ClassTest.txt文件中给出。
 
 
-      2018��07��01��(����)����>22��(�޶�)����>08��07��(�����޶�)����>09��07��(�����޶�)����>10��02��(�����޶�)����>
+      2018年07月01日(发布)——>22日(修订)——>08月07日(升级修订)——>09月07日(升级修订)——>10月02日(升级修订)——>
 
-      2019��01��02��(����)
+      2019年01月02日(升级)
 
-    �ر�������δ���������ɣ�л�����һ��Ա���⴫����
-    ��ӭ��ѯ����ѯ�����ۡ���ש���绰��0991-2695070��QQ��591589408���������½�����ѧ�����»ᡪ���Žܡ�
+    特别声明：未经许可，谢绝下载者传播或销售，作者保留追责权力。
+    欢迎质询、咨询、讨论、拍砖！电话：0991-2695070。QQ：591589408
