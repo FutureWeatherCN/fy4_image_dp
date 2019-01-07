@@ -1,0 +1,57 @@
+大家好！
+      使用我开发的FY-4卫星成像仪数据处理软件的朋友们，一定有一个问题：你将FY-4数据处理成经纬网格数据，但我要使用这个数据，还是存在操作这个数据的问题。虽然这个数据已经很简单了，但毕竟还是不能信手拈来呀！所以这里就针对这个我定义的经纬网格数据，编制了一个操作类库CommonGridDat.dll。并对这个类库说明如下。
+
+一、概述：
+      CommonGridDat.dll是一个多层的等经纬网格数据。定义思想是：将格距相等的二维经纬网格数据作为一层，将描述这层数据的参数甚至统计特征作为这一层数据的数据头；然后将多层这样的数据合为一体成为一个数据类。这个类可序列化、可压缩、解压缩，其中的运算或对应尽量实现并行化运算。这个定义有一个好处，每一个经纬网格点都将对应不同层的不同性质的数据，方便对应及关系运算。每层数据的性质、甚至统计特征在层头上轻松获取。
+
+二、经纬数据类CommonGridDat.dll的成员及方法：
+    1、CommonGridDat类库的成员：
+        CommonGridDat.dTLat：经纬网格区域上纬度。
+        CommonGridDat.dBLat：经纬网格区域下纬度。
+        CommonGridDat.dWLon：经纬网格区域左经度。
+        CommonGridDat.dELon：经纬网格区域右经度。
+        CommonGridDat.dCrossRes：经纬网格横向分辨率。
+        CommonGridDat.dEndlongRes：经纬网格纵向分辨率。
+        CommonGridDat.iPixX：经纬网格区域对应的横向数据点数。
+        CommonGridDat.iPixY：经纬网格区域对应的纵向数据点数。
+        CommonGridDat.iGridLevel：经纬网格的数据层数。
+        CommonGridDat.iLLGrid：表达经纬网格及其相应数据的三维数组。
+        CommonGridDat.gDataDiscr：用于描述多层经纬网格数据的每一层的数据识别，定义如下。
+        CommonGridDat.gDataDiscr.DataDiscr：多层经纬网格数据中本层的数据识别字符串。
+        CommonGridDat.gDataDiscr.DecPlace：多层经纬网格数据中本层数据的小数位数，1为整数；10为一位小数；100为两位小数；1000为三位小数。
+        CommonGridDat.gDataDiscr.DYear：多层经纬网格数据中本层数据的生成年代。
+        CommonGridDat.gDataDiscr.DMounth：多层经纬网格数据中本层数据的生成月份，如是年值，则本变量及以下值均为int.MaxValue。
+        CommonGridDat.gDataDiscr.DDay：多层经纬网格数据中本层数据的生成日期，如是月值，则本变量及以下值均为int.MaxValue。
+        CommonGridDat.gDataDiscr.DTime：多层经纬网格数据中本层数据的生成时间，如是日值，则本变量及以下值均为int.MaxValue。
+        CommonGridDat.gDataDiscr.DMinute：多层经纬网格数据中本层数据的生成分钟，如是小时值，则本变量及以下值均为int.MaxValue。
+        CommonGridDat.gDataDiscr.DSecond：多层经纬网格数据中本层数据的生成秒，如是分钟值，则本变量为int.MaxValue。
+        CommonGridDat.gDataDiscr.iMeanGrayValue：本层除去无数据点以外的格点数据的均值,以int.MaxValue为无数据表示。
+        CommonGridDat.gDataDiscr.iVariance：本层除去无数据点以外的格点数据的方差。
+        CommonGridDat.gDataDiscr.iMaxValue：本层除去无数据点以外的格点数据中的极大值。
+        CommonGridDat.gDataDiscr.iMinimum：本层除去无数据点以外的格点数据中的极小值。
+    2、CommonGridDat类库的方法：
+        CommonGridDat.CommonGridDat()：以默认方式实例化这个经纬网格，纬度范围30—50，经度范围70—100，分辨率横纵皆为1/32度。数据层为2层。大约是960*640*2的格点阵。
+        CommonGridDat.CommonGridDat(ref double dTLat, ref double dBLat, ref double dWLon, ref double dELon, ref double dCrossRes, ref double dEndlongRes, ref int iGridLevel)：以调用参数化方式实例化这个经纬网格。返回的实例如果层数小于0，则未成功实例化。
+        CommonGridDat.LookForStatistic()：在本类实例化后，自行计算各层统计特征并实例化本类相应的统计量成员。
+        CommonGridDat.MakeTheLevelImage(ref int iLevelN, out Bitmap levelBitmap)：将本类某层数据用图像方式表达并提供。
+        CommonGridDat.MakeTheLevelImage(ref int iLevelN, double dleft,double dright,double dbottom,double dtop,out Bitmap levelBitmap)：将本类某层数据的截取区域用图像方式表达并提供。
+        CommonGridDat.SaveToFile(ref string filePath)：将本经纬网格数据类的实例以流形式存储到指定路径。
+        CommonGridDat.ReadFromFile(ref string filePath, out object thisObj)：将本经纬网格数据类的实例从存储的数据文件中读回来。
+        CommonGridDat.SaveToCompressFile(ref string compressFilePath)：将本经纬网格数据类的实例以压缩流形式存储到指定路径。
+        CommonGridDat.ReadFromCompressFile(ref string filePath, out object thisObj)：将本经纬网格数据类的实例从存储的压缩数据文件中读回来。
+        CommonGridDat.GetLevelsDescribe()：读取本类每个层的描述字符串，以便用户方便查阅每层数据的意义。
+        CommonGridDat.GetLevelsDatetime()：读取本类每个层的数据表达的时间，以便用户方便查阅每层数据的时间。
+        CommonGridDat.GetPointValues(ref double pLon, ref double pLat)：获取给定经纬度对应点各数据层的数据。返回数据是通过靠近格点双线性插值后获得的值。
+
+三、经纬数据类CommonGridDat.dll的使用方法：
+      CommonGridDat.dll类库的使用，可以方便调用数据，如果你针对经纬网格数据有新的操作方法，热切希望你能将方法添加到这个类库当中，我对这个数据类完全开放，不主张任何著作权利。这个类库的使用非常简单，把这个CommonGridDat.dll动态链接库拷贝进你的目录，在你的工程项目里添加引用即可。
+      针对Fy-4卫星成像仪数据处理软件生成的产品，后续接力的后端处理程序，应当使用这个动态链接库。为此，我也制作了一个后端处理的示例程序，这将在另一个程序说明中给出说明。有了这个类库和Fy4HDF5Dat.dll类库的支持，FY-4号卫星当前下发的成像仪数据的全应用过程的所有技术障碍都将不存在了。
+
+    欢迎质询、咨询、讨论、拍砖！电话：0991-2695070。QQ：591589408。还有姓名：新疆气象学会理事会——张杰。
+
+
+2018年08月09日——>2019年元月02日。
+
+
+
+
